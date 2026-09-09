@@ -107,7 +107,8 @@ h1 { margin: 0; font-family: var(--display); font-size: clamp(3.2rem,5.7vw,5.6re
 .sr-only { width: 1px; height: 1px; padding: 0; position: absolute; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
 @media (max-width: 900px) {
-  .board { grid-template-columns: repeat(4,minmax(300px,1fr)); margin-right: calc((100vw - min(100vw - 38px,1520px))/ -2); padding-right: 20px; }
+  .board { grid-template-columns: repeat(2,minmax(0,1fr)); margin-right: 0; padding-right: 4px; overflow: visible; }
+  .lane:nth-child(even) { transform: none; }
 }
 @media (max-width: 680px) {
   .topbar { min-height: auto; padding-block: 12px; align-items: stretch; flex-direction: column; gap: 12px; }
@@ -116,7 +117,8 @@ h1 { margin: 0; font-family: var(--display); font-size: clamp(3.2rem,5.7vw,5.6re
   main { width: calc(100% - 28px); padding-top: 34px; }
   .board-heading { align-items: flex-start; flex-direction: column; gap: 18px; }
   .board-intro { max-width: 500px; }
-  .board { margin-right: -14px; grid-template-columns: repeat(4,minmax(86vw,1fr)); padding-right: 16px; }
+  .board { margin-right: 0; grid-template-columns: minmax(0,1fr); gap: 24px; padding-inline: 4px; }
+  .lane { min-height: 0; }
 }
 @media (max-width: 430px) {
   .new-update { padding-inline: 13px; }
@@ -128,4 +130,3 @@ h1 { margin: 0; font-family: var(--display); font-size: clamp(3.2rem,5.7vw,5.6re
   *,*::before,*::after { transition-duration: .01ms !important; }
   .lane:nth-child(even),.update-card:nth-child(2n) { transform: none; }
 }
-
